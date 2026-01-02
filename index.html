@@ -1,0 +1,550 @@
+<style>
+.Header{
+display: flex;
+flex-direction: column;
+margin-top: 120px;
+
+text-align:center
+
+
+}
+h1 span{
+background:linear-gradient(90deg,#00f5a0,#00d9f5);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.Meinf{
+color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 60;
+}
+.Info{
+    
+    color: rgb(189, 186, 186);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 15;
+    margin-bottom: 100px;
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+.Header {
+  animation: fadeUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+
+.AbtMe {
+  animation: scaleUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.AbtText{
+  color: rgb(201, 199, 199);
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+
+  max-width: 1000px;   
+  margin: 0 auto;  
+  margin-bottom: 75px;  
+}
+
+
+strong{
+    color: white;
+}
+    
+.Projects{
+   display: flex;
+flex-direction: column;
+text-align: center;
+ 
+}
+
+.card {
+  
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 60px;
+   
+    border-radius: 15px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(83, 81, 81, 0.514);
+    
+   
+    
+}
+
+
+
+.card:hover {
+    transform: scale(1.1);
+    background-color: rgba(112, 109, 109, 0.63);
+}
+
+.Play{
+    transition: transform 0.3s ease;
+}
+
+.Play:hover{
+     transform: scale(1.1);
+}
+.watch{
+    transition: transform 0.3s ease;
+}
+.watch:hover{
+     transform: scale(1.1);
+}
+
+.Discord{
+ transition: transform 0.3s ease;
+}
+
+.Discord:hover{
+    transform: scale(1.1);
+}
+
+.Inter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    width: 195px;
+    height: 155px;
+    margin-top: 60px;
+    border-radius: 15px;
+
+    background-color: rgba(83, 81, 81, 0.514);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.Inter:hover{
+    transform: scale(1.1);
+    background-color: rgba(112, 109, 109, 0.63);
+}
+
+.Fiverr{
+  transition: transform 0.3s ease;
+}
+.Fiverr:hover{
+      transform: scale(1.1);
+}
+
+.Instagram{
+   transition: transform 0.3s ease;
+}
+.Instagram:hover{
+   transform: scale(1.1);
+}
+
+.skills{
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 150px;
+  flex-direction: column;
+}
+
+
+.skills {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.skills h2 {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.skill {
+  width: 380px;
+background-color: rgba(83, 81, 81, 0.514);
+  border-radius: 12px;
+  padding: 15px 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.skill-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.skill-left img {
+  width: 40px;
+  height: 40px;
+}
+
+.skill-left span {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.skill-percent {
+margin-left: 8px;
+  margin-top: 7px;
+  float: right;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.progress {
+  margin-top: 12px;
+  height: 8px;
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00c6ff, #00ff9d);
+  border-radius: 10px;
+}
+
+
+.textSkill{
+    color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.skill{
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill:hover{
+     background-color: rgba(112, 109, 109, 0.63);
+  transform: scale(1.05);
+}
+
+</style>
+
+<!DOCTYPE html>
+<html>
+<head><title>Robo's Portfolio</title>
+</head>
+<body style = "background:linear-gradient(120deg,#0f0c29,#302b63,#24243e);
+padding-bottom: 50px;">
+<div class="Header" >
+    <h1 class="Meinf">
+    Hi, im <span>Robobond</span>
+    <p class="Info">Luau Scripter · Web Dev · Java Script</p>
+    <img  src="PFP" style="
+    width: 150px;
+    border-radius: 100%;
+    border-color: white;
+    border-style: solid;
+    ">
+    </h1>
+    
+</div>
+
+<div class="abtMe">
+<h2 style="color: white;
+font-weight: 900;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 30px;
+;">About Me
+
+
+
+
+</h2>
+<p class="AbtText">
+  I’m a <strong>LuaU scripter</strong> with over <strong>3 months of hands-on experience</strong>, mainly working on game systems, scripts, and gameplay mechanics. I enjoy experimenting with ideas and turning them into something that actually works.
+  <br><br>
+  Besides scripting, I’m also a beginner <strong>web developer</strong> with experience in <strong>HTML, CSS, and JavaScript</strong>. I like building simple, clean, and functional websites while continuing to learn and improve my skills.
+  <br><br>
+  I’m always trying to get better at what I do, paying attention to clean code and good organization. I currently live in the <strong>Czech Republic</strong> and work in the <strong>CET time zone</strong>.
+</p>
+
+
+</div>
+
+<div class="skills">
+  <h2>Skills</h2>
+
+  <div class="skill">
+    <div class="skill-left">
+      <img src="LUA.png" >
+      <span>LuaU</span>
+    </div>
+    <span class="skill-percent">85%</span>
+    <div class="progress">
+      <div class="progress-bar" style="width: 85%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-left">
+      <img src="Html.png" >
+      <span>Html</span>
+    </div>
+    <span class="skill-percent">65%</span>
+    <div class="progress">
+      <div class="progress-bar" style="width: 65%"></div>
+    </div>
+  </div>
+
+    <div class="skill">
+    <div class="skill-left">
+      <img src="css.png" >
+      <span>Css</span>
+    </div>
+    <span class="skill-percent">60%</span>
+    <div class="progress">
+      <div class="progress-bar" style="width: 60%"></div>
+    </div>
+  </div>
+
+    <div class="skill">
+    <div class="skill-left">
+      <img src="JavaS.png" >
+      <span>JavaScript</span>
+    </div>
+    <span class="skill-percent">45%</span>
+    <div class="progress">
+      <div class="progress-bar" style="width: 45%"></div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class="Projects">
+<h2 style="color: white;
+font-weight: 900;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 30px;">My Projects
+
+</h2>
+<div style="display: flex;
+flex-direction: row;
+align-items: center;
+text-align: center;
+align-content: center;
+justify-content: center;
+gap: 40px;
+margin-bottom: 150px;">
+    <div class="card" style="
+     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    ">
+<p style="
+  color: rgb(255, 255, 255);
+font-weight: 700;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+  ">
+  Search a Dumpster</p>
+    <img src="Search a Dumpster Banner.png" style="
+  margin-left: 25px;
+  display: block;
+  width: 250px;
+  border-radius: 8px;">
+  <button class="Play" style="margin-top: 30px;
+  width: 180px;
+  height: 50px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  background-color: rgba(56, 17, 230, 0.89);
+  border-radius: 8px;
+  border: none;
+  "
+  
+  >Play</button>
+  
+</div>
+
+<div class="card" style="
+ box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+">
+<p style="
+  color: rgb(255, 255, 255);
+font-weight: 700;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+  ">
+  FPS viewModel</p>
+    <img src="Snímek obrazovky 2025-12-30 194757.png" style="
+  margin-left: 25px;
+  display: block;
+  width: 250px;
+  border-radius: 8px;">
+  <button class="watch"  style="margin-top: 25px;
+  width: 180px;
+  height: 50px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  background-color: rgba(56, 17, 230, 0.89);
+  border-radius: 8px;
+  border: none;
+  "
+  
+  >Watch</button>
+  
+</div>
+</div>
+
+</div>
+
+    <h2 style="color: white;
+font-weight: 900;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 30px;
+text-align: center;
+">Contact Me</h2>
+<div class="AbtMe" style="display: flex;
+
+align-items: center;
+text-align: center;
+align-content: center;
+justify-content: center;
+flex-direction: row;
+gap: 50px;
+" >
+
+   <div class="Inter"
+   >
+
+<img src="Discord_Logo_PNG_Vector__Icon_Free_Download-removebg-preview.png" style="width: 90px;
+
+">
+<button class="Discord" style="
+
+width: 130px;
+height: 40px;
+background-color: rgba(56, 17, 230, 0.89);
+border: none;
+border-radius: 8px;
+color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  margin-top: 10px;
+">Discord</button>
+
+
+</div>
+
+   <div class="Inter" >
+
+<img src="YESS.png" style="width: 90px;
+
+">
+<button class="Instagram" style="
+
+width: 130px;
+height: 40px;
+background-color: rgba(56, 17, 230, 0.89);
+border: none;
+border-radius: 8px;
+color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  margin-top: 10px;
+">Instagram</button>
+
+
+</div>
+
+   <div class="Inter" >
+
+<img src="Fiverr_Logo___01-removebg-preview.png" style="width: 90px;
+margin-top: 20px;
+">
+<button class="Fiverr" style="
+
+width: 130px;
+height: 40px;
+background-color: rgba(56, 17, 230, 0.89);
+border: none;
+border-radius: 8px;
+color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  margin-top: 15px;
+">Fiverr</button>
+
+
+</div>
+
+
+
+
+</div>
+
+<script>
+document.querySelector(".Play").onclick = () => {
+  window.open("https://www.roblox.com/games/75886477085783/", "_blank");
+};
+document.querySelector(".watch").onclick = () => {
+  window.open("https://youtu.be/YCMbk59ptl4", "_blank");
+};
+document.querySelector(".Discord").onclick = () => {
+  window.open("https://discord.com/users/977978939278512158", "_blank");
+};
+
+document.querySelector(".Fiverr").onclick = () => {
+  window.open("https://www.fiverr.com/s/EgZwege", "_blank");
+};
+document.querySelector(".Instagram").onclick = () => {
+  window.open("https://www.instagram.com/cpt.robo/", "_blank");
+};
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
