@@ -49,6 +49,17 @@ color: white;
     transform: translateY(0) scale(1);
   }
 }
+@keyframes levitateSoft {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 
 .Header {
@@ -62,6 +73,9 @@ color: white;
   flex-direction: column;
   text-align: center;
   justify-content: center;
+}
+.Profile {
+  animation: levitateSoft 4s ease-in-out infinite;
 }
 
 
@@ -257,13 +271,15 @@ margin-left: 8px;
 <html>
 <head><title>Robo's Portfolio</title>
 </head>
-<body style = "background:linear-gradient(120deg,#0f0c29,#302b63,#24243e);
+
+<body style = "background:linear-gradient(120deg, #1e3c72, #2a5298);
+
 padding-bottom: 50px;">
 <div class="Header" >
     <h1 class="Meinf">
     Hi, im <span>Robobond</span>
     <p class="Info">Luau Scripter · Web Dev · Java Script</p>
-    <img  src="PFP" style="
+    <img class="Profile"  src="PFP" style="
     width: 150px;
     border-radius: 100%;
     border-color: white;
@@ -285,7 +301,7 @@ font-size: 30px;
 
 </h2>
 <p class="AbtText">
-  I’m a <strong>LuaU scripter</strong> with over <strong>6 months of experience</strong>, mainly working on game systems, scripts, and gameplay mechanics. I enjoy experimenting with ideas and turning them into something that actually works.
+  I’m a <strong>LuaU scripter</strong> with over <strong>3 months of hands-on experience</strong>, mainly working on game systems, scripts, and gameplay mechanics. I enjoy experimenting with ideas and turning them into something that actually works.
   <br><br>
   Besides scripting, I’m also a beginner <strong>web developer</strong> with experience in <strong>HTML, CSS, and JavaScript</strong>. I like building simple, clean, and functional websites while continuing to learn and improve my skills.
   <br><br>
@@ -383,7 +399,7 @@ font-size: 20px;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 900;
-  background-color: rgba(56, 17, 230, 0.89);
+  background-color: rgba(17, 109, 230, 0.89);
   border-radius: 8px;
   border: none;
   "
@@ -414,7 +430,7 @@ font-size: 20px;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 900;
-  background-color: rgba(56, 17, 230, 0.89);
+  background-color: rgba(17, 109, 230, 0.89);
   border-radius: 8px;
   border: none;
   "
@@ -452,7 +468,7 @@ gap: 50px;
 
 width: 130px;
 height: 40px;
-background-color: rgba(56, 17, 230, 0.89);
+background-color: rgba(17, 109, 230, 0.89);
 border: none;
 border-radius: 8px;
 color: white;
@@ -474,7 +490,7 @@ color: white;
 
 width: 130px;
 height: 40px;
-background-color: rgba(56, 17, 230, 0.89);
+background-color: rgba(17, 109, 230, 0.89);
 border: none;
 border-radius: 8px;
 color: white;
@@ -496,7 +512,7 @@ margin-top: 20px;
 
 width: 130px;
 height: 40px;
-background-color: rgba(56, 17, 230, 0.89);
+background-color: rgba(17, 109, 230, 0.89);
 border: none;
 border-radius: 8px;
 color: white;
@@ -543,6 +559,11 @@ document.querySelector(".Instagram").onclick = () => {
 </script>
 </body>
 </html>
+
+
+
+
+
 
 
 
