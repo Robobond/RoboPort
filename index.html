@@ -1,33 +1,19 @@
 <style>
-.Header{
-display: flex;
-flex-direction: column;
-margin-top: 120px;
 
-text-align:center
-
-
-}
-h1 span{
-background:linear-gradient(90deg,#00f5a0,#00d9f5);
--webkit-background-clip:text;
-color:transparent;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-.Meinf{
-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    font-size: 60;
+body{
+background:#12151c;
+font-family: Arial, Helvetica, sans-serif;
+color:white;
+display:flex;
+min-height:100vh;
 }
-.Info{
-    
-    color: rgb(189, 186, 186);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    font-size: 15;
-    margin-bottom: 100px;
-}
+
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -49,6 +35,7 @@ color: white;
     transform: translateY(0) scale(1);
   }
 }
+
 @keyframes levitateSoft {
   0% {
     transform: translateY(0);
@@ -61,208 +48,333 @@ color: white;
   }
 }
 
-
-.Header {
-  animation: fadeUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-
-.AbtMe {
-  animation: scaleUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
+.SideBar{
+width:290px;
+min-height:100vh;
+background:#0b0e14;
+border-right:1px solid #252a35;
+padding:45px 28px;
+display:flex;
+flex-direction:column;
+align-items:center;
+position:fixed;
+left:0;
+top:0;
+animation: slideIn 0.7s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
-.Profile {
-  animation: levitateSoft 4s ease-in-out infinite;
+
+.Profile{
+width:140px;
+border-radius:100%;
+border:2px solid white;
+animation: levitateSoft 4s ease-in-out infinite;
+margin-bottom:22px;
 }
 
+.Meinf{
+font-weight:900;
+font-size:30px;
+text-align:center;
+margin-bottom:10px;
+}
+
+.Meinf span{
+background:linear-gradient(90deg,#00f5a0,#00d9f5);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.Info{
+color: rgb(189, 186, 186);
+font-weight: 600;
+font-size: 14px;
+text-align:center;
+line-height:1.7;
+margin-bottom:35px;
+}
+
+.SideNav{
+width:100%;
+display:flex;
+flex-direction:column;
+gap:6px;
+}
+
+.SideNav a{
+color:rgb(189, 186, 186);
+text-decoration:none;
+font-weight:700;
+font-size:15px;
+padding:11px 14px;
+border-radius:10px;
+transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.SideNav a:hover{
+background: rgba(83, 81, 81, 0.514);
+color:white;
+transform: scale(1.03);
+}
+
+.SideContact{
+margin-top:auto;
+width:100%;
+display:flex;
+flex-direction:column;
+gap:10px;
+padding-top:35px;
+}
+
+.SideBtn{
+width:100%;
+height:44px;
+background-color: rgba(17, 109, 230, 0.89);
+border:none;
+border-radius:8px;
+color:white;
+font-size:15px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight:900;
+cursor:pointer;
+transition: transform 0.3s ease;
+}
+
+.SideBtn:hover{
+transform: scale(1.05);
+}
+
+.Main{
+margin-left:290px;
+width:calc(100% - 290px);
+padding:55px 65px;
+}
+
+.Section{
+margin-bottom:85px;
+animation: fadeUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.SectionTitle{
+font-weight:900;
+font-size:13px;
+color:#00d9f5;
+text-transform:uppercase;
+letter-spacing:2px;
+margin-bottom:10px;
+}
+
+.Section h2{
+font-weight:900;
+font-size:32px;
+margin-bottom:28px;
+}
 
 .AbtText{
-  color: rgb(201, 199, 199);
-  font-weight: 700;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-
-  max-width: 1000px;   
-  margin: 0 auto;  
-  margin-bottom: 75px;  
+color: rgb(201, 199, 199);
+font-weight: 700;
+font-size: 18px;
+line-height:1.75;
+max-width:720px;
 }
-
 
 strong{
-    color: white;
-}
-    
-.Projects{
-   display: flex;
-flex-direction: column;
-text-align: center;
- 
+color:white;
 }
 
-.card {
-  
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    margin-top: 60px;
-   
-    border-radius: 15px;
-    width: 300px;
-    height: 300px;
-    background-color: rgba(83, 81, 81, 0.514);
-    
-   
-    
-}
-
-
-
-.card:hover {
-    transform: scale(1.1);
-    background-color: rgba(112, 109, 109, 0.63);
-}
-
-.Play{
-    transition: transform 0.3s ease;
-}
-
-.Play:hover{
-     transform: scale(1.1);
-}
-.watch{
-    transition: transform 0.3s ease;
-}
-.watch:hover{
-     transform: scale(1.1);
-}
-
-.Discord{
- transition: transform 0.3s ease;
-}
-
-.Discord:hover{
-    transform: scale(1.1);
-}
-
-.Inter{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
- box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    width: 195px;
-    height: 155px;
-    margin-top: 60px;
-    border-radius: 15px;
-
-    background-color: rgba(83, 81, 81, 0.514);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.Inter:hover{
-    transform: scale(1.1);
-    background-color: rgba(112, 109, 109, 0.63);
-}
-
-.Fiverr{
-  transition: transform 0.3s ease;
-}
-.Fiverr:hover{
-      transform: scale(1.1);
-}
-
-.Instagram{
-   transition: transform 0.3s ease;
-}
-.Instagram:hover{
-   transform: scale(1.1);
-}
-
-.skills{
-  margin-top: 60px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 150px;
-  flex-direction: column;
-}
-
-
-.skills {
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-}
-
-.skills h2 {
-  font-size: 32px;
-  font-weight: 900;
-  margin-bottom: 20px;
+.SkillRow{
+display:flex;
+flex-wrap:wrap;
+gap:18px;
 }
 
 .skill {
-  width: 380px;
+width:calc(50% - 9px);
 background-color: rgba(83, 81, 81, 0.514);
-  border-radius: 12px;
-  padding: 15px 18px;
-  margin-bottom: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
-
-.skill-left {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.skill-left img {
-  width: 40px;
-  height: 40px;
-}
-
-.skill-left span {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.skill-percent {
-margin-left: 8px;
-  margin-top: 7px;
-  float: right;
-  font-weight: 700;
-  opacity: 0.9;
-}
-
-.progress {
-  margin-top: 12px;
-  height: 8px;
-  background-color: #3a3a3a;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.progress-bar {
-  height: 100%;
-  background: linear-gradient(90deg, #00c6ff, #00ff9d);
-  border-radius: 10px;
-}
-
-
-.textSkill{
-    color: rgb(255, 255, 255);
-  font-weight: 700;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-}
-
-.skill{
-  transition: transform 0.3s ease, background-color 0.3s ease;
+border-radius: 12px;
+padding: 16px 18px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+transition: transform 0.3s ease, background-color 0.3s ease;
+animation: scaleUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .skill:hover{
-     background-color: rgba(112, 109, 109, 0.63);
-  transform: scale(1.05);
+background-color: rgba(112, 109, 109, 0.63);
+transform: scale(1.05);
+}
+
+.skill-top{
+display:flex;
+align-items:center;
+}
+
+.skill-left {
+display: flex;
+align-items: center;
+gap: 14px;
+}
+
+.skill-left img {
+width: 40px;
+height: 40px;
+}
+
+.skill-left span {
+font-size: 18px;
+font-weight: 700;
+}
+
+.skill-csharp{
+width:100%;
+background-color: rgba(83, 81, 81, 0.514);
+border-radius: 12px;
+padding: 18px 22px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+border: 1px dashed #00d9f5;
+display:flex;
+align-items:center;
+justify-content:space-between;
+transition: transform 0.3s ease, background-color 0.3s ease;
+animation: scaleUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.skill-csharp:hover{
+background-color: rgba(112, 109, 109, 0.63);
+transform: scale(1.03);
+}
+
+.skill-csharp span{
+font-size: 18px;
+font-weight: 900;
+background:linear-gradient(90deg,#00f5a0,#00d9f5);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.learningTag{
+font-weight:700;
+color:#00f5a0;
+font-size:14px;
+padding: 6px 14px;
+border-radius: 20px;
+background: rgba(0, 217, 245, 0.1);
+border: 1px solid #00d9f5;
+}
+
+.ProjectGrid{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card {
+transition: transform 0.3s ease, background-color 0.3s ease;
+border-radius: 15px;
+width: 280px;
+background-color: rgba(83, 81, 81, 0.514);
+box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+overflow:hidden;
+animation: scaleUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.card:hover {
+transform: scale(1.08);
+background-color: rgba(112, 109, 109, 0.63);
+}
+
+.card img{
+width:100%;
+height:155px;
+object-fit:cover;
+display:block;
+}
+
+.cardBody{
+padding:18px 20px 22px;
+}
+
+.cardTitle{
+color: rgb(255, 255, 255);
+font-weight: 700;
+font-size: 20px;
+margin-bottom:16px;
+}
+
+.Play{
+transition: transform 0.3s ease;
+}
+.Play:hover{
+transform: scale(1.1);
+}
+
+.watch{
+transition: transform 0.3s ease;
+}
+.watch:hover{
+transform: scale(1.1);
+}
+
+.watch2{
+transition: transform 0.3s ease;
+}
+.watch2:hover{
+transform: scale(1.1);
+}
+
+.ContactRow{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.Inter{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+width: 195px;
+height: 155px;
+border-radius: 15px;
+background-color: rgba(83, 81, 81, 0.514);
+transition: transform 0.3s ease, background-color 0.3s ease;
+animation: scaleUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.Inter:hover{
+transform: scale(1.1);
+background-color: rgba(112, 109, 109, 0.63);
+}
+
+.Discord{
+transition: transform 0.3s ease;
+}
+.Discord:hover{
+transform: scale(1.1);
+}
+
+.Instagram{
+transition: transform 0.3s ease;
+}
+.Instagram:hover{
+transform: scale(1.1);
+}
+
+.Fiverr{
+transition: transform 0.3s ease;
+}
+.Fiverr:hover{
+transform: scale(1.1);
 }
 
 </style>
@@ -272,332 +384,276 @@ margin-left: 8px;
 <head><title>Robo's Portfolio</title>
 </head>
 
-<body style = "background:linear-gradient(120deg, #1e3c72, #2a5298);
+<body>
 
-padding-bottom: 50px;">
-<div class="Header" >
-    <h1 class="Meinf">
-    Hi, im <span>Robobond</span>
-    <p class="Info">Luau Scripter · Web Dev · Java Script</p>
-    <img class="Profile"  src="PFP" style="
-    width: 150px;
-    border-radius: 100%;
-    border-color: white;
-    border-style: solid;
-    ">
-    </h1>
-    
+<div class="SideBar">
+
+<img class="Profile" src="PFP" style="
+width: 140px;
+border-radius: 100%;
+border-color: white;
+border-style: solid;
+">
+
+<h1 class="Meinf">Hi, im <span>Robobond</span></h1>
+<p class="Info">Luau Scripter · New to Web Dev<br>Learning C#</p>
+
+<div class="SideNav">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </div>
 
-<div class="abtMe">
+<div class="SideContact">
+<button class="SideBtn Discord">Discord</button>
+<button class="SideBtn Instagram">Instagram</button>
+<button class="SideBtn Fiverr">Fiverr</button>
+</div>
+
+</div>
+
+
+<div class="Main">
+
+<div class="Section" id="about" style="animation-delay: 0.1s;">
+<p class="SectionTitle">who am i</p>
 <h2 style="color: white;
 font-weight: 900;
 font-family: Arial, Helvetica, sans-serif;
-font-size: 30px;
-;">About Me
-
-
-
-
-</h2>
+font-size: 30px;">About Me</h2>
 <p class="AbtText">
-  I’m a <strong>LuaU scripter</strong> with over <strong> 1year of hands-on experience</strong>, mainly working on game systems, scripts, and gameplay mechanics. I enjoy experimenting with ideas and turning them into something that actually works.
+  I'm a <strong>LuaU scripter</strong> with over <strong>1 year of hands-on experience</strong>, mainly working on game systems, scripts, and gameplay mechanics. I enjoy experimenting with ideas and turning them into something that actually works.
   <br><br>
-  Besides scripting, I’m also a beginner <strong>web developer</strong> with experience in <strong>HTML, CSS, and JavaScript</strong>. I like building simple, clean, and functional websites while continuing to learn and improve my skills.
+  Besides scripting, I'm also <strong>new to web development</strong> with experience in <strong>HTML and CSS</strong>. I like building simple, clean, and functional websites while continuing to learn and improve my skills.
   <br><br>
-  I’m always trying to get better at what I do, paying attention to clean code and good organization. I currently live in the <strong>Czech Republic</strong> and work in the <strong>CET time zone</strong>.
+  I'm also <strong>learning C#</strong> right now.
+  <br><br>
+  I'm always trying to get better at what I do, paying attention to clean code and good organization. I currently live in the <strong>Czech Republic</strong> and work in the <strong>CET time zone</strong>.
 </p>
-
-
-</div>
-
-<div class="skills">
-  <h2>Skills</h2>
-
-  <div class="skill">
-    <div class="skill-left">
-      <img src="LUA.png" >
-      <span>LuaU</span>
-    </div>
-    <span class="skill-percent">85%</span>
-    <div class="progress">
-      <div class="progress-bar" style="width: 85%"></div>
-    </div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-left">
-      <img src="Html.png" >
-      <span>Html</span>
-    </div>
-    <span class="skill-percent">65%</span>
-    <div class="progress">
-      <div class="progress-bar" style="width: 65%"></div>
-    </div>
-  </div>
-
-    <div class="skill">
-    <div class="skill-left">
-      <img src="css.png" >
-      <span>Css</span>
-    </div>
-    <span class="skill-percent">60%</span>
-    <div class="progress">
-      <div class="progress-bar" style="width: 60%"></div>
-    </div>
-  </div>
-
-    <div class="skill">
-    <div class="skill-left">
-      <img src="JavaS.png" >
-      <span>JavaScript</span>
-    </div>
-    <span class="skill-percent">45%</span>
-    <div class="progress">
-      <div class="progress-bar" style="width: 45%"></div>
-    </div>
-  </div>
-
 </div>
 
 
-
-<div class="Projects">
+<div class="Section" id="skills" style="animation-delay: 0.2s;">
+<p class="SectionTitle">what i know</p>
 <h2 style="color: white;
 font-weight: 900;
 font-family: Arial, Helvetica, sans-serif;
-font-size: 30px;">My Projects
+font-size: 30px;">Skills</h2>
 
-</h2>
-<div style="display: flex;
-flex-direction: row;
-align-items: center;
-text-align: center;
-align-content: center;
-justify-content: center;
-gap: 40px;
-margin-bottom: 150px;">
-    <div class="card" style="
-     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    ">
-<p style="
-  color: rgb(255, 255, 255);
-font-weight: 700;
+<div class="SkillRow">
+
+  <div class="skill">
+    <div class="skill-top">
+      <div class="skill-left">
+        <img src="LUA.png">
+        <span>LuaU</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-top">
+      <div class="skill-left">
+        <img src="Html.png">
+        <span>Html</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-top">
+      <div class="skill-left">
+        <img src="css.png">
+        <span>Css</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill-csharp">
+    <span>C#</span>
+    <p class="learningTag">learning</p>
+  </div>
+
+</div>
+</div>
+
+
+<div class="Section" id="projects" style="animation-delay: 0.3s;">
+<p class="SectionTitle">my work</p>
+<h2 style="color: white;
+font-weight: 900;
 font-family: Arial, Helvetica, sans-serif;
-font-size: 20px;
-  ">
-  Search a Dumpster</p>
-    <img src="Search a Dumpster Banner.png" style="
-  margin-left: 25px;
-  display: block;
-  width: 250px;
-  border-radius: 8px;">
-  <button class="Play" style="margin-top: 30px;
-  width: 180px;
-  height: 50px;
+font-size: 30px;">My Projects</h2>
+
+<div class="ProjectGrid">
+
+  <div class="card">
+    <img src="Search a Dumpster Banner.png" style="border-radius: 8px;">
+    <div class="cardBody">
+      <p class="cardTitle">Search a Dumpster</p>
+      <button class="Play" style="
+  width: 100%;
+  height: 48px;
   color: rgb(255, 255, 255);
-  font-size: 20px;
+  font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 900;
   background-color: rgba(17, 109, 230, 0.89);
   border-radius: 8px;
   border: none;
-  "
-  
-  >Play</button>
-  
-</div>
+  cursor:pointer;
+  ">Play</button>
+    </div>
+  </div>
 
-<div class="card" style="
- box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-">
-<p style="
+  <div class="card">
+    <img src="Snímek obrazovky 2025-12-30 194757.png" style="border-radius: 8px;">
+    <div class="cardBody">
+      <p class="cardTitle">FPS viewModel</p>
+      <button class="watch" style="
+  width: 100%;
+  height: 48px;
   color: rgb(255, 255, 255);
-font-weight: 700;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 20px;
-  ">
-  FPS viewModel</p>
-    <img src="Snímek obrazovky 2025-12-30 194757.png" style="
-  margin-left: 25px;
-  display: block;
-  width: 250px;
-  border-radius: 8px;">
-  <button class="watch"  style="margin-top: 25px;
-  width: 180px;
-  height: 50px;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
+  font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 900;
   background-color: rgba(17, 109, 230, 0.89);
   border-radius: 8px;
   border: none;
-  "
-  
-  >Watch</button>
-  
-</div>
+  cursor:pointer;
+  ">Watch</button>
+    </div>
+  </div>
 
-<div class="card" style="
- box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-">
-<p style="
+  <div class="card">
+    <img src="Rafters.png" style="border-radius: 8px;">
+    <div class="cardBody">
+      <p class="cardTitle">Rafters</p>
+      <button class="watch2" style="
+  width: 100%;
+  height: 48px;
   color: rgb(255, 255, 255);
-font-weight: 700;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 20px;
-  ">
-  Rafters</p>
-    <img src="Rafters.png" style="
-  margin-left: 25px;
-  display: block;
-  width: 250px;
-  border-radius: 8px;">
-  <button class="watch2"  style="margin-top: 25px;
-  width: 180px;
-  height: 50px;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
+  font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 900;
   background-color: rgba(17, 109, 230, 0.89);
   border-radius: 8px;
   border: none;
-  "
-  
-  >Watch</button>
-  
+  cursor:pointer;
+  ">Watch</button>
+    </div>
+  </div>
+
+</div>
 </div>
 
 
-</div>
-
-</div>
-
-    <h2 style="color: white;
+<div class="Section" id="contact" style="animation-delay: 0.4s;">
+<p class="SectionTitle">reach me</p>
+<h2 style="color: white;
 font-weight: 900;
 font-family: Arial, Helvetica, sans-serif;
 font-size: 30px;
-text-align: center;
-">Contact Me</h2>
-<div class="AbtMe" style="display: flex;
+text-align: left;">Contact Me</h2>
 
-align-items: center;
-text-align: center;
-align-content: center;
-justify-content: center;
-flex-direction: row;
-gap: 50px;
-" >
+<div class="ContactRow">
 
-   <div class="Inter"
-   >
-
-<img src="Discord_Logo_PNG_Vector__Icon_Free_Download-removebg-preview.png" style="width: 90px;
-
-">
-<button class="Discord" style="
-
+  <div class="Inter">
+    <img src="Discord_Logo_PNG_Vector__Icon_Free_Download-removebg-preview.png" style="width: 90px;">
+    <button class="Discord" style="
 width: 130px;
 height: 40px;
 background-color: rgba(17, 109, 230, 0.89);
 border: none;
 border-radius: 8px;
 color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 900;
-  margin-top: 10px;
+font-size: 18px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 900;
+margin-top: 10px;
+cursor:pointer;
 ">Discord</button>
+  </div>
 
-
-</div>
-
-   <div class="Inter" >
-
-<img src="YESS.png" style="width: 90px;
-
-">
-<button class="Instagram" style="
-
+  <div class="Inter">
+    <img src="YESS.png" style="width: 90px;">
+    <button class="Instagram" style="
 width: 130px;
 height: 40px;
 background-color: rgba(17, 109, 230, 0.89);
 border: none;
 border-radius: 8px;
 color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 900;
-  margin-top: 10px;
+font-size: 18px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 900;
+margin-top: 10px;
+cursor:pointer;
 ">Instagram</button>
+  </div>
 
-
-</div>
-
-   <div class="Inter" >
-
-<img src="Fiverr_Logo___01-removebg-preview.png" style="width: 90px;
-margin-top: 20px;
-">
-<button class="Fiverr" style="
-
+  <div class="Inter">
+    <img src="Fiverr_Logo___01-removebg-preview.png" style="width: 90px; margin-top: 10px;">
+    <button class="Fiverr" style="
 width: 130px;
 height: 40px;
 background-color: rgba(17, 109, 230, 0.89);
 border: none;
 border-radius: 8px;
 color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 900;
-  margin-top: 15px;
+font-size: 18px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 900;
+margin-top: 10px;
+cursor:pointer;
 ">Fiverr</button>
+  </div>
 
+</div>
+</div>
 
 </div>
 
-
-
-
-</div>
 
 <script>
+const openLink = (url) => {
+  window.open(url, "_blank");
+};
+
 document.querySelector(".Play").onclick = () => {
-  window.open("https://www.roblox.com/games/75886477085783/", "_blank");
+  openLink("https://www.roblox.com/games/75886477085783/");
 };
 document.querySelector(".watch").onclick = () => {
-  window.open("https://youtu.be/YCMbk59ptl4", "_blank");
+  openLink("https://youtu.be/YCMbk59ptl4");
 };
 document.querySelector(".watch2").onclick = () => {
-  window.open("https://www.youtube.com/watch?v=p0vG-P2nS34", "_blank");
-};
-document.querySelector(".Discord").onclick = () => {
-  window.open("https://discord.com/users/977978939278512158", "_blank");
+  openLink("https://www.youtube.com/watch?v=p0vG-P2nS34");
 };
 
-document.querySelector(".Fiverr").onclick = () => {
-  window.open("https://www.fiverr.com/s/EgZwege", "_blank");
-};
-document.querySelector(".Instagram").onclick = () => {
-  window.open("https://www.instagram.com/cpt.robo/", "_blank");
-};
+document.querySelectorAll(".Discord").forEach((btn) => {
+  btn.onclick = () => {
+    openLink("https://discord.com/users/977978939278512158");
+  };
+});
+document.querySelectorAll(".Fiverr").forEach((btn) => {
+  btn.onclick = () => {
+    openLink("https://www.fiverr.com/s/EgZwege");
+  };
+});
+document.querySelectorAll(".Instagram").forEach((btn) => {
+  btn.onclick = () => {
+    openLink("https://www.instagram.com/cpt.robo/");
+  };
+});
 
-
-
-
-
-
-
-
-
+document.querySelectorAll(".SideNav a").forEach((link) => {
+  link.onclick = (e) => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+  };
+});
 </script>
+
 </body>
 </html>
-
-
-
-
-
-
